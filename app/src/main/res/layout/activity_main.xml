@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/vedio_list_bg">
+
+    <ListView
+        android:id="@+id/musicListView"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="250dp" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="500dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/image_abulm"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/seek_bg"
+        android:thumb="@drawable/seek_thumb_pic" />
+
+    <TextView
+        android:id="@+id/current_time_tv"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/image_abulm"
+        android:layout_alignTop="@+id/seekBar"
+        android:layout_marginLeft="10dp"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/total_time_tv"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/musicListView"
+        android:layout_alignTop="@+id/seekBar"
+        android:layout_toEndOf="@+id/seekBar"
+        android:layout_toRightOf="@+id/seekBar"
+        android:gravity="center"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/now"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/singer"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_alignTop="@+id/now_name"
+        android:layout_marginLeft="20dp"
+        android:text="歌手:"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/song"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_alignTop="@+id/now"
+        android:layout_marginLeft="20dp"
+        android:text="歌名:"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/now_name"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/now"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/now_abulm"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/now_name"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/white" />
+
+    <ImageView
+        android:id="@+id/image_abulm"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/now_abulm"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/ablum_bg" />
+
+    <ImageView
+        android:id="@+id/image_abulm_on"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/now_abulm"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/ablum_default"
+        android:rotation="180">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/previous"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/seekBar"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/pre_media" />
+
+    <ImageView
+        android:id="@+id/play_pause"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/previous"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/previous"
+        app:srcCompat="@drawable/ic_play_normal" />
+
+    <ImageView
+        android:id="@+id/stop"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/previous"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/play_pause"
+        app:srcCompat="@drawable/ic_stop_normal" />
+
+    <ImageView
+        android:id="@+id/next"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/previous"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/stop"
+        android:background="@drawable/next_media" />
+
+    <ImageView
+        android:id="@+id/play_random"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/previous"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/next"
+        android:background="@drawable/ic_shuffle" />
+
+    <ImageView
+        android:id="@+id/play_repeat"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/previous"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/play_random"
+        android:background="@drawable/ic_repeat" />
+
+</RelativeLayout>
